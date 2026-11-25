@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f7ff">
+<title>化学ゲーム</title>
+<style>
+  :root{ --bg:#f4f7ff; --card:#fff; --text:#2d2a32; --sub:#737a8c; }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; min-height:100%;}
+  body{
+    background:
+      radial-gradient(circle at 0% 0%, #ffe6d9 0, transparent 35%),
+      radial-gradient(circle at 100% 20%, #dbe8ff 0, transparent 40%),
+      var(--bg);
+    background-attachment:fixed; color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;
+  }
+  .app{max-width:440px; margin:0 auto; padding:calc(env(safe-area-inset-top) + 28px) 16px calc(env(safe-area-inset-bottom) + 24px);}
+  header{text-align:center; margin-bottom:26px;}
+  .flask{font-size:52px; line-height:1;}
+  h1{margin:8px 0 4px; font-size:30px; font-weight:800; letter-spacing:.08em;}
+  header p{margin:0; color:var(--sub); font-size:15px;}
+  .games{display:flex; flex-direction:column; gap:16px;}
+  .game{display:flex; align-items:center; gap:16px; text-decoration:none; color:inherit; background:var(--card);
+        border-radius:22px; padding:16px; box-shadow:0 4px 0 #e3e8f4, 0 4px 14px rgba(40,60,120,.08);}
+  .game:active{transform:translateY(3px); box-shadow:0 1px 0 #e3e8f4;}
+  .icon{flex:0 0 72px; height:72px; border-radius:18px; display:flex; align-items:center; justify-content:center;
+        color:#fff; font-weight:800; font-family:"Helvetica Neue",Arial,sans-serif; font-size:24px;}
+  .icon.genso{background:linear-gradient(160deg,#3dd6f5,#2a8cf0); box-shadow:inset 0 -4px 0 rgba(0,0,0,.15);}
+  .icon.sanenki{background:linear-gradient(135deg,#ff6b6b 50%,#4d96ff 50%); font-size:18px; box-shadow:inset 0 -4px 0 rgba(0,0,0,.12);}
+  .tx{flex:1; min-width:0;}
+  .nm{font-size:20px; font-weight:800;}
+  .ds{font-size:14px; color:var(--sub); margin-top:3px; line-height:1.5;}
+  .tag{display:inline-block; font-size:12px; font-weight:700; border-radius:10px; padding:1px 8px; margin-top:6px;
+       background:#eef2fb; color:#55607a;}
+  .arrow{color:#c3c9d8; font-size:24px;}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="flask">⚗️</div>
+    <h1>化学ゲーム</h1>
+    <p>遊びたいゲームを選んでね</p>
+  </header>
+  <main class="games">
+    <a class="game" href="genso/">
+      <div class="icon genso">H</div>
+      <div class="tx">
+        <div class="nm">元素記号タッチ</div>
+        <div class="ds">原子番号1〜20の元素記号を順番にタッチ</div>
+        <span class="tag">元素記号</span>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+    <a class="game" href="sanenki/">
+      <div class="icon sanenki">H⁺ OH⁻</div>
+      <div class="tx">
+        <div class="nm">酸・塩基クイズ</div>
+        <div class="ds">価数・強弱・化学式の4択クイズ（10問）</div>
+        <span class="tag">酸と塩基</span>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+  </main>
+</div>
+</body>
+</html>
